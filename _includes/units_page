@@ -3,7 +3,7 @@
       {% assign mydocs = site[collection.label] | group_by: 'category' %}
       {% for cat in mydocs %}
         {% assign items = cat.items | sort: 'order' %}
-		<a href="{{ items[0].url | prepend: site.baseurl}}" class=""><h2>{{ cat.name }}</h2></a>
+		<a href="{{ items[0].url | prepend: site.baseurl}}" class="">{{ cat.name }}</a>
 		{% if items[0].content contains site.excerpt_separator %}
 	      {{ items[0].excerpt }}
         {% endif %}
